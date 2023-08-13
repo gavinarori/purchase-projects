@@ -9,11 +9,18 @@ module.exports = {
     extend: {
       backgroundImage: {
         'wallapaper-1':"url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkXJ8mOub7y7HzDYt-hwoujlUSllH5b5Tjrg&usqp=CAU')",
-        'wallapaper-2':
-          '/desktop-wallpaper-10-developer-front-end-developer.jpg',
           'dark-blue':"url('https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77700326851.jpg')",
-          'Youtube':"url('https://youtu.be/wAmbDCJocJM')"
+          'wallapaper-3':"top-3-best-ever-tech-ads.jpg"
       },
+      gridTemplateColumns: {
+        fluid: "repeat(auto-fit, minmax(20rem,1fr))",
+      },
+      colors: {
+        'dark-accent-1': '#111111',
+        'dark-accent-2': '#333333',
+        'dark-accent-3': '#444444',
+        'dark-accent-5': '#888888'
+      }
     },
   },
   plugins: [],

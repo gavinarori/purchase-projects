@@ -2,23 +2,15 @@ import React, { useState } from 'react';
 import useMediaQuery from '@/hooks/useMediaQuery';
 import Link from 'next/link';
 
-interface NavbarProps {
-  isTopOfPage: boolean;
-  selectedPage: string;
-  setSelectedPage: (page: string) => void;
-}
 
-const Navbar: React.FC<NavbarProps> = ({
-  isTopOfPage,
-  selectedPage,
-  setSelectedPage,
-}) => {
+
+const Navbar = () => {
   const [isMenuToggled, setIsMenuToggled] = useState(false);
   const isDesktop = useMediaQuery('(min-width: 768px)');
-  const navbarBackground = isTopOfPage ? '' : 'bg-red';
 
   return (
-    <nav className='z-40 w-full fixed top-0 py-6 bg-dark-blue '>
+    
+    <nav className='z-40 w-full fixed top-0 py-6 bg-dark-accent-1 '>
       <div className="flex items-center justify-between mx-auto w-5/6">
         <h4 className="font-playfair text-3xl font-bold text-white ">SC</h4>
 
@@ -27,10 +19,10 @@ const Navbar: React.FC<NavbarProps> = ({
           <div className="flex justify-between gap-16 font-opensans text-sm font-semibold">
             
             
-            <Link href="/Home" className='text-white '>
+            <Link href="/Login" className='text-white '>
               Login
             </Link>
-            <Link href="/Home" className='text-white '>
+            <Link href="/verification/Register" className='text-white '>
               SignUp
             </Link>
               
@@ -60,9 +52,6 @@ const Navbar: React.FC<NavbarProps> = ({
               Home
             </Link>
               
-            <Link href="/Home">
-              Home
-            </Link>
             <Link href="/Home">
               Home
             </Link>
