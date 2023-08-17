@@ -10,6 +10,8 @@ module.exports = {
       backgroundImage: {
         'wallapaper-1':"url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkXJ8mOub7y7HzDYt-hwoujlUSllH5b5Tjrg&usqp=CAU')",
           'dark-blue':"url('https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77700326851.jpg')",
+          'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+          'gradient-conic':'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
           'wallapaper-3':"top-3-best-ever-tech-ads.jpg"
       },
       gridTemplateColumns: {
@@ -23,5 +25,7 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
 }

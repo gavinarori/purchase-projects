@@ -7,9 +7,42 @@ import GithubProvider from 'next-auth/providers/github';
 import GoogleProvider from 'next-auth/providers/google';
 import CredentialsProvider from 'next-auth/providers/credentials';
 
-const options: NextAuthOptions = {
+ export const options: NextAuthOptions = {
   adapter: PrismaAdapter(prisma),
   secret: process.env.NEXTAUTH_SECRET,
+  session: {
+    strategy: "jwt",
+},
+pages: {
+  signIn: '/pages/BlogIndex',
+},
+callbacks: {
+  session: ({ session, token }) => {
+    console.log('Session Callback', { session, token })
+    return {
+      ...session,
+      user: {
+        ...session.user,
+        id: token.id,
+        randomKey: token.randomKey
+      }
+    }
+  },
+  jwt: ({ token, user }) => {
+    console.log('JWT Callback', { token, user })
+    if (user) {
+      const u = user as unknown as any
+      return {
+        ...token,
+        id: u.id,
+        randomKey: u.randomKey
+      }
+    }
+    return token
+  }
+},
+debug: process.env.NODE_ENV === 'development',
+
   providers: [
     GithubProvider({
       clientId: process.env.GITHUB_CLIENT_ID as string,
@@ -40,7 +73,7 @@ const options: NextAuthOptions = {
       },
       async authorize(credentials: any) {
         // Check if all the necessary details are provided
-        if (!credentials.username || !credentials.password || !credentials.email) {
+        if (!credentials.email || !credentials.password) {
           throw new Error('Please enter all your details');
         }
 

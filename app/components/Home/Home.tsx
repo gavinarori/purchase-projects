@@ -1,31 +1,42 @@
-import React from 'react'
-import './Home.css'
+"use client"
+import React from 'react';
 
 const Home = () => {
-  return (
-    
-    <div className="relative pb-4 grid-cols-fluid  dark:bg-gray-900 h-full w-full">
-    <div>
-          <div className= "opacity-100 duration-700 ease-in-out scale-100">
-            <div className='  w-full h-[900px] relative object-cover bg-fixed bg-center bg-cover custom-img'>
-              <img
-                  className="h-full w-[1700px]"
-                  src='/top-3-best-ever-tech-ads.jpg'
-                  alt="shoes"
-                ></img>
-            </div>
-            <div className="absolute top-60 mx-auto inset-x-1/5 ml-20 hidden md:block">
-                  <h1 className="text-white text-4xl  font-bold tracking-normal leading-none">
-                  SOURCE CODE
-                 </h1>
-                 <p className='text-white text-2xl l leading-none pt-4'>
-                  making your projects a face
-                 </p>
-            </div>
-          </div>
+  
+    return (
+    <div className="relative h-full">
+      <video src='/commercial video for IT company - ELEKS - How to Turn a Great Idea into a Software Product-.mp4' className="w-full h-[56.25vw] object-cover brightness-[50%] transition duration-500" autoPlay muted loop />
+      <div className="absolute top-[30%] md:top-[40%] ml-4 md:ml-16">
+        <p className="text-white text-1xl md:text-5xl h-full w-[50%] lg:text-6xl font-bold drop-shadow-xl">
+          SOURCE CODE
+        </p>
+        <p className="text-white text-[8px] md:text-lg mt-3 md:mt-8 w-[90%] md:w-[80%] lg:w-[50%] drop-shadow-xl">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem nobis odit accusantium voluptatibus fugiat perferendis labore animi hic exercitationem dolorum eos a qui vero, explicabo tenetur. Nihil omnis eligendi laudantium!
+        </p>
+        <div className="flex flex-row items-center mt-3 md:mt-4 gap-3">
+          <button
+            className="
+            bg-white
+            text-white
+              bg-opacity-30 
+              rounded-md 
+              py-1 md:py-2 
+              px-2 md:px-4
+              w-auto 
+              text-xs lg:text-lg 
+              font-semibold
+              flex
+              flex-row
+              items-center
+              hover:bg-opacity-20
+              transition
+            "
+            >
+              More Info
+          </button>
+        </div>
+      </div>
     </div>
-  </div>
   )
 }
-
 export default Home;

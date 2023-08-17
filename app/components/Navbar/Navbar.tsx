@@ -22,7 +22,7 @@ const Navbar = () => {
             <Link href="/Login" className='text-white '>
               Login
             </Link>
-            <Link href="/verification/Register" className='text-white '>
+            <Link href="/Register" className='text-white '>
               SignUp
             </Link>
               
