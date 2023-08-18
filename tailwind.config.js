@@ -21,7 +21,9 @@ module.exports = {
         'dark-accent-1': '#111111',
         'dark-accent-2': '#333333',
         'dark-accent-3': '#444444',
-        'dark-accent-5': '#888888'
+        'dark-accent-5': '#888888',
+        glass: "rgba(255,255,255,0.25)",
+        brown: "rgb(30, 30, 17);"
       }
     },
   },
