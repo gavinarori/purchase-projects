@@ -4,6 +4,9 @@ import { useState, useEffect } from "react"
 import { signIn, useSession } from 'next-auth/react'
 import { toast } from "react-hot-toast"
 import { useRouter } from "next/navigation"
+import { BsGithub, BsGoogle  } from 'react-icons/bs';
+import AuthSocialButton from './AuthSocialButton';
+import Link from "next/link"
 
 
 
@@ -18,8 +21,9 @@ export default function Login() {
 
             useEffect(() => {
                 if (session?.status === 'authenticated') {
-                   router.push('/Dashboard') 
+                   router.push('/pages/Dashboard') 
                 }
+                
             })
 
             const loginUser = async (e:any) => {
@@ -106,16 +110,42 @@ export default function Login() {
                 </button>
               </div>
             </form>
-            <h1>Sign into Github below</h1>
-            <button onClick={() => signIn('github')} className="bg-black text-white w-full">Sign In</button>
-            <h1>Sign into Google below</h1>
-            <button onClick={() => signIn('google')} className="bg-red-500 text-white w-full">Sign In</button>
-  
+            <div className="mt-6">
+          <div className="relative">
+            <div 
+              className="
+                absolute 
+                inset-0 
+                flex 
+                items-center
+              "
+            >
+              <div className="w-full border-t border-gray-300" />
+            </div>
+            <div className="relative flex justify-center text-sm">
+              <span className="bg-white px-2 text-gray-500">
+                Or continue with
+              </span>
+            </div>
+          </div>
+
+          <div className="mt-6 flex gap-2">
+            <AuthSocialButton 
+              icon={BsGithub} 
+              onClick={() => signIn('github')} 
+            />
+            <AuthSocialButton 
+              icon={BsGoogle} 
+              onClick={() => signIn('google')} 
+            />
+          </div>
+        </div>
             <p className="mt-10 text-center text-sm text-gray-500">
               Not a member?{' '}
-              <a href="#" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
-                Start a 14 day free trial
-              </a>
+              <Link href ='/Register' className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
+                create an account
+              </Link>
+              
             </p>
           </div>
         </div>
