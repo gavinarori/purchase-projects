@@ -5,7 +5,7 @@ const Home = () => {
   
     return (
     <div className="relative h-full">
-      <div className="flex sm:min-h-full flex-1 flex-col justify-center px-0 py-0 lg:px-8 ">
+      <div className="flex sm:min-h-full flex-1 flex-col justify-center px-0 py-0 lg:px-0 ">
       <video src='/commercial video for IT company - ELEKS - How to Turn a Great Idea into a Software Product-.mp4' className="w-full h-[56.25vw] object-cover brightness-[50%] transition duration-500" autoPlay muted loop />
       </div>
       
