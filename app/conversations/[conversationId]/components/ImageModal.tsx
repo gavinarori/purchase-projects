@@ -15,7 +15,7 @@ const ImageModal: React.FC<ImageModalProps> = ({
   src
 }) => {
   if (!src) {
-    return '/placeholder.jpg';
+    return;
   }
 
   return (

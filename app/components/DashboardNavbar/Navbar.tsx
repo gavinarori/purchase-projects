@@ -83,9 +83,10 @@ export const Navbar : React.FC<ProfileProps> = ({ user }) => {
                       <span className="absolute -inset-1.5" />
                       <span className="sr-only">Open user menu</span>
                       <Image
-                        className="h-8 w-8 rounded-full"
-                        src={user?.image || '/placeholder.jpg'}
+                        className="h-8 w-8 rounded-full "
+                        src= {user?.image || ""}
                         alt="profile"
+                        
                       />
                     </Menu.Button>
                   </div>
