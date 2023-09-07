@@ -1,17 +1,25 @@
-import React from 'react'
-import { Navbar }from '@/app/components/DashboardNavbar/Navbar'
-import Sidebar from '@/app/components/DashboardNavbar/Sidebar'
-import Service from '@/app/components/Services/Service'
+'use client'
+// Import necessary types
+import React, { createContext, useState, ReactNode } from 'react';
+import { Navbar } from '@/app/components/DashboardNavbar/Navbar';
+import Service from '@/app/components/Services/Service';
+import Profile from '@/app/splash/page';
+import Link from 'next/link';
 
-const Dashboard = () => {
+
+
+
+const Dashboard = (): JSX.Element => {
+  
   return (
     <div>
       
-      <Navbar />
-      <Service/>
+        <Navbar />
+        <Service  />
 
+      
     </div>
-  )
-}
+  );
+};
 
-export default Dashboard
+export default Dashboard;

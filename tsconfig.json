@@ -23,6 +23,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/components/features/scrollButton.jsx", "app/api/blog/route.ts", "app/components/UserProfile.jsx", "app/ui/page.tsx", "app/pages/new/loading.jsx", "app/pages/new/page.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx","**/*.jsx", ".next/types/**/*.ts", "app/components/features/scrollButton.jsx", "app/api/blog/route.ts", "app/components/UserProfile.jsx", "app/ui/page.tsx", "app/pages/new/loading.jsx", "app/pages/new/page.jsx", "app/pages/Dashboard/page.tsx", "app/components/Services/Service.tsx", "hooks/useAxios.js"],
   "exclude": ["node_modules"]
 }
